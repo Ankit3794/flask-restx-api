@@ -14,6 +14,7 @@ jwt = JWTManager()
 
 def create_app(config_name):
     from main.controller import api
+    from main.util import error_handlers
 
     app = Flask(__name__)
     app.config.from_object(config_by_name.get(config_name))

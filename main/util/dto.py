@@ -30,12 +30,3 @@ class PlayerDto:
         'is_bowler': fields.Boolean(required=True),
         'is_allrounder': fields.Boolean(required=True)
     })
-
-
-class ExpenseDto:
-    api = Namespace('expense', description='Expense related API')
-    expense = api.model('expense', {
-        'title': fields.String(required=True),
-        'amount': fields.Float(required=True),
-        'date': fields.DateTime(required=True)
-    })
