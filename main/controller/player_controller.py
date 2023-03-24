@@ -23,6 +23,7 @@ class PlayerList(Resource):
     @api.doc("add new player")
     @api.marshal_with(_player)
     @api.marshal_list_with(_player)
+    @api.expect([_player], validate=True)
     @admin_required()
     def post(self):
         data = request.json
